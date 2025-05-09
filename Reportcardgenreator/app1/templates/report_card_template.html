@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report Card</title>
+    <style>
+        body { font-family: Arial; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid black; padding: 8px; text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>Report Card</h1>
+    <p><strong>Name:</strong> {{ student.name }}</p>
+    <p><strong>Class:</strong> {{ student.student_class }}</p>
+    <p><strong>Roll Number:</strong> {{ student.roll_number }}</p>
+
+    <table>
+        <tr>
+            <th>Subject Name</th>
+            <th>Subject Code</th>
+            <th>Marks</th>
+        </tr>
+        {% for subject in subjects %}
+        <tr>
+            <td>{{ subject.subject_name }}</td>
+            <td>{{ subject.subject_code }}</td>
+            <td>{{ subject.marks }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</body>
+</html>

@@ -27,7 +27,10 @@
             <td>{{ subject.marks }}</td>
         </tr>
         {% endfor %}
-
     </table>
+
+    {% if final_comments %}
+    <p><strong>Comments:</strong> {{ final_comments }}</p>
+    {% endif %}
 </body>
 </html>
